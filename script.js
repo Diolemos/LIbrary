@@ -1,6 +1,9 @@
 // this empty array will store all the books(objects)
 let myLibrary = []
 
+//The DOM Element where the library will be displayed
+let cardDeck = document.getElementById('card-deck');
+
 //constructor function to create the book objects
 
 function Book(title, author, pages, read) {
@@ -37,5 +40,13 @@ function addBook(book) {
 
 
 function showLibrary() {
+    let libraryEl = ''
 
+    for (i = 0; i < myLibrary.length; i++) {
+        libraryEl += `<div class="card">
+        <h4 class="card-title"> ${myLibrary[i].title} </h4>
+    </div>`
+    }
+
+    cardDeck.innerHTML = libraryEl;
 }
