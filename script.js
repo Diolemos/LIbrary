@@ -52,8 +52,9 @@ function showLibrary() {
     let libraryEl = ''
 
     for (i = 0; i < myLibrary.length; i++) {
-        libraryEl += `<div class="card">
+        libraryEl += `<div class="card" id="book${i}">
         <h4 class="card-title"> ${myLibrary[i].title} </h4>
+        <button  onclick="removeBook(${i})">X</button>
     </div>`
     }
 
@@ -66,6 +67,6 @@ function showLibrary() {
 //The elements will be created after the page has been loaded and 
 //JavaScript will not be able to identify them 
 
-function removeBook() {
-
+function removeBook(elId) {
+    document.getElementById(`book${elId}`).remove()
 }
