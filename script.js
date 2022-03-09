@@ -27,6 +27,9 @@ function Book(title, author, pages, read) {
 let gulliverstravel = new Book(`Gulliver's Travel`, 'Johnnathan swift', 600, true)
 
 //Function to add the book object to the library array
+function addBook(book) {
+    myLibrary.push(book)
+}
 
 
 //Function to display the books in the library...
