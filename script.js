@@ -27,7 +27,16 @@ function Book(title, author, pages, read) {
 }
 
 // This creates the first book object
-let gulliverstravel = new Book(`Gulliver's Travel`, 'Johnnathan swift', 600, true)
+let gulliverstravel = new Book(`Gulliver's Travel`, 'Johnnathan swift', 600, true);
+
+// I'll add a few books to the library so I can better style It
+addBook(gulliverstravel)
+let dracula = new Book('Dracula', 'Bram Stoker', 200, true);
+addBook(dracula)
+let tngr = new Book('Think and Grow Rich', 'Napoleon Hill', 275, false)
+addBook(tngr)
+let htwaip = new Book('How to win friends and influence people', 'Dale Carnigie', 200, true)
+addBook(htwaip)
 
 //Function to add the book object to the library array
 function addBook(book) {
