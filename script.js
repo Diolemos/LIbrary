@@ -50,3 +50,13 @@ function showLibrary() {
 
     cardDeck.innerHTML = libraryEl;
 }
+
+
+//Function to remove the book from the library
+//An event listener has to be added to the 'libreryEl' text , inside the showLibrary(),since...
+//The elements will be created after the page has been loaded and 
+//JavaScript will not be able to identify them 
+
+function removeBook() {
+
+}
