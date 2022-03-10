@@ -38,6 +38,8 @@ addBook(tngr)
 let htwaip = new Book('How to win friends and influence people', 'Dale Carnigie', 200, true)
 addBook(htwaip)
 
+showLibrary() //displays the library
+
 //Function to add the book object to the library array
 function addBook(book) {
     myLibrary.push(book)
@@ -55,7 +57,7 @@ function showLibrary() {
         libraryEl += `<div class="card" id="book${i}">
         <h4 class="card-title"> ${myLibrary[i].title} </h4>
         <button  onclick="removeBook(${i})">X</button>
-    </div>`
+     <button onclick="toggleRead(${i})">Read It?</button> </div>`
     }
 
     cardDeck.innerHTML = libraryEl;
@@ -68,5 +70,17 @@ function showLibrary() {
 //JavaScript will not be able to identify them 
 
 function removeBook(elId) {
+    //removes element from DOM
     document.getElementById(`book${elId}`).remove()
+    // Removes element from the array MyLibrary
+    myLibrary.splice(elId, 1)
+    //displays books on the page, rearenging the tags and IDs, 
+    // Making It possible to delete other books in the future
+    showLibrary()
+}
+
+//A button to toggle the 'read' class of the book;
+
+function toggleRead(elId) {
+    document.getElementById(`book${elId}`).classList.toggle('read')
 }
