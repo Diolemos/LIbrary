@@ -19,7 +19,7 @@ header{
     align-items: center;
     justify-content: center;
     background-color: #c7b299;
-    margin-bottom: 20px;
+    margin-bottom: 3%;
 }
 header p{
     font-family: 'Gentium Book Basic', serif;
@@ -40,6 +40,7 @@ header p{
     text-decoration: underline;
     padding-right: 0;
   position: relative;
+  margin-bottom: 3%;
 }
 
 
@@ -63,4 +64,22 @@ header p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.card{
+    width: 322px;
+    height: 286px;
+    border: 3px solid #000;
+    border-radius: 15px;
+    background: #b3b3b3;
+    padding:15px;
+}
+
+.card-title{
+    color: #000;
+    text-decoration: underline;
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 5px;
 }
