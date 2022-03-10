@@ -19,10 +19,48 @@ header{
     align-items: center;
     justify-content: center;
     background-color: #c7b299;
+    margin-bottom: 20px;
 }
 header p{
     font-family: 'Gentium Book Basic', serif;
     font-weight: 900;
     font-size: 2rem;
     color: #603813;
+   
+  
+}
+#addBook{
+    border: none;
+    background: none;
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: 900;
+    font-style:italic;
+    color: #603813;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    padding-right: 0;
+  position: relative;
+}
+
+
+
+ sup{
+    color: #c69c6d;
+    font-weight: 900;
+    font-size: 2rem;
+    text-decoration:none;
+    margin-bottom: 2px;
+
+}
+
+#addBook, sup{
+    cursor: pointer;
+   
+
+}
+
+#card-deck{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
