@@ -6,6 +6,7 @@ html{
     padding: 0;
   
 }
+
 body{
     width: 100vw;
     height: 100vh;
@@ -31,6 +32,8 @@ header p{
    
   
 }
+
+
 #addBook{
     border: none;
     background: none;
@@ -43,6 +46,7 @@ header p{
     padding-right: 0;
   position: relative;
   margin-bottom: 3%;
+  margin-left: 4%;
 }
 
 
@@ -66,6 +70,9 @@ header p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
 }
 
 .card{
