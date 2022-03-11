@@ -55,12 +55,25 @@ function showLibrary() {
     let libraryEl = ''
 
     for (i = 0; i < myLibrary.length; i++) {
-        libraryEl += `<div class="card" id="book${i}">
+
+        if (myLibrary[i].read == false) {
+            libraryEl += `<div class="card" id="book${i}">
+           <h4 class="card-title"> ${myLibrary[i].title} </h4>
+           <p class="bookInfo">${myLibrary[i].author}, ${myLibrary[i].releaseYear}</p>
+   
+           <button class="removeBtn"  onclick="removeBook(${i})">X</button>
+          <label for="toggleRead${i}" >Read<input type="checkbox" id="toggleRead${i}" onchange="toggleRead(${i})" ></label></div>`
+
+
+        } else {
+            libraryEl += `<div class="card read" id="book${i}">
         <h4 class="card-title"> ${myLibrary[i].title} </h4>
         <p class="bookInfo">${myLibrary[i].author}, ${myLibrary[i].releaseYear}</p>
 
         <button class="removeBtn"  onclick="removeBook(${i})">X</button>
-       <label for="toggleRead${i}" >Read<input type="checkbox" id="toggleRead${i}" onchange="toggleRead(${i})" ></label></div>`
+       <label for="toggleRead${i}" >Read<input type="checkbox" checked id="toggleRead${i}" onchange="toggleRead(${i})" ></label></div>`
+
+        }
     }
 
     cardDeck.innerHTML = libraryEl;
