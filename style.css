@@ -99,7 +99,7 @@ header p{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: 3px solid #5a5a5a;
+    border: 4px solid #5a5a5a;
     cursor: pointer
 }
 
@@ -114,4 +114,18 @@ header p{
 .bookInfo{
     font-style: 600;
     font-size: 30px;
+}
+
+.read{
+    background-color: #c7b299;
+    border-color: #754c24;
+    color: #754c24;
+}
+
+.read label, .read .card-title{
+color:#503417
+}
+.read .removeBtn{
+    border-color: #6b4720;
+    
 }
