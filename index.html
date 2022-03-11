@@ -29,7 +29,22 @@
     <button id="addBook">AddBook</button><sup>+</sup>
     <div id="card-deck"></div>
 
+    <!-- This modal will pop up when the addbtn 
+    is clicked. Its positioned absolute and 
+    has the property display set to none
+    by default -->
+    <div id="add-modal">
+        <form action="#">
+            <label for="title">Title: <input type="text" name="" required id="title"></label>
+            <label for="author">Author: <input type="text" name="" required id="author"> </label>
+            <label for="pages">Pages: <input type="number" name="" required min="1" max="9999" step="1"
+                    id="pages"></label>
+            <label for="realeaseYear">Realease Year: <input type="number" name="" required id="">
+            </label>
+            <label for="isItRead">Did you read It? <input type="checkbox" name="" id="isItRead" required></label>
 
+        </form>
+    </div>
 
 
     <footer>
