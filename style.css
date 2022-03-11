@@ -9,10 +9,12 @@ html{
 
 body{
     width: 100vw;
-    height: 100vh;
+   min-height: 100vh;
     padding: 0;
     margin: 0;
     font-family: 'Gentium Book Basic', serif;
+    position: relative;
+    padding-bottom: 100px;
 }
 
 header{
@@ -71,6 +73,7 @@ header p{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+   
     
     
 }
@@ -135,4 +138,23 @@ color:#503417
 .read .removeBtn{
     border-color: #6b4720;
     
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c7b299;
+    position: absolute;
+    bottom: 0px;
+
+}
+
+footer p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #603813;
 }
