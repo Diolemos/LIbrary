@@ -56,7 +56,7 @@ function showLibrary() {
     for (i = 0; i < myLibrary.length; i++) {
         libraryEl += `<div class="card" id="book${i}">
         <h4 class="card-title"> ${myLibrary[i].title} </h4>
-        <button  onclick="removeBook(${i})">X</button>
+        <button class="removeBtn"  onclick="removeBook(${i})">X</button>
      <button onclick="toggleRead(${i})">Read It?</button> </div>`
     }
 
@@ -74,7 +74,7 @@ function removeBook(elId) {
     document.getElementById(`book${elId}`).remove()
     // Removes element from the array MyLibrary
     myLibrary.splice(elId, 1)
-    //displays books on the page, rearenging the tags and IDs, 
+    //displays books on the page, rearranging the tags and IDs, 
     // Making It possible to delete other books in the future
     showLibrary()
 }
