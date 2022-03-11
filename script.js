@@ -6,12 +6,13 @@ let cardDeck = document.getElementById('card-deck');
 
 //constructor function to create the book objects
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, releaseYear, read) {
 
     this.title = title
     this.author = author
 
     this.pages = pages
+    this.releaseYear = releaseYear
     this.read = read
     //Every book object will have acess to this info function book.info()
     this.info = function () {
@@ -27,15 +28,15 @@ function Book(title, author, pages, read) {
 }
 
 // This creates the first book object
-let gulliverstravel = new Book(`Gulliver's Travel`, 'Johnnathan swift', 600, true);
+let gulliverstravel = new Book(`Gulliver's Travel`, 'Johnnathan swift', 600, 1775, true);
 
 // I'll add a few books to the library so I can better style It
 addBook(gulliverstravel)
-let dracula = new Book('Dracula', 'Bram Stoker', 200, true);
+let dracula = new Book('Dracula', 'Bram Stoker', 200, 1880, true);
 addBook(dracula)
-let tngr = new Book('Think and Grow Rich', 'Napoleon Hill', 275, false)
+let tngr = new Book('Think and Grow Rich', 'Napoleon Hill', 275, 1920, false)
 addBook(tngr)
-let htwaip = new Book('How to win friends and influence people', 'Dale Carnigie', 200, true)
+let htwaip = new Book('How to win friends and influence people', 'Dale Carnigie', 200, 1922, true)
 addBook(htwaip)
 
 showLibrary() //displays the library
@@ -56,6 +57,8 @@ function showLibrary() {
     for (i = 0; i < myLibrary.length; i++) {
         libraryEl += `<div class="card" id="book${i}">
         <h4 class="card-title"> ${myLibrary[i].title} </h4>
+        <p class="bookInfo">${myLibrary[i].author}, ${myLibrary[i].releaseYear}</p>
+
         <button class="removeBtn"  onclick="removeBook(${i})">X</button>
        <label for="toggleRead${i}" >Read<input type="checkbox" id="toggleRead${i}" onchange="toggleRead(${i})" ></label></div>`
     }
