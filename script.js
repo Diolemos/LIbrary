@@ -57,7 +57,7 @@ function showLibrary() {
         libraryEl += `<div class="card" id="book${i}">
         <h4 class="card-title"> ${myLibrary[i].title} </h4>
         <button class="removeBtn"  onclick="removeBook(${i})">X</button>
-     <button onclick="toggleRead(${i})">Read It?</button> </div>`
+       <label for="toggleRead${i}" >Read<input type="checkbox" id="toggleRead${i}" onchange="toggleRead(${i})" ></label></div>`
     }
 
     cardDeck.innerHTML = libraryEl;
