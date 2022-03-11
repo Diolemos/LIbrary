@@ -4,12 +4,14 @@
 html{
     margin: 0;
     padding: 0;
+  
 }
 body{
     width: 100vw;
     height: 100vh;
     padding: 0;
     margin: 0;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 header{
@@ -105,6 +107,11 @@ header p{
     position: absolute;
     bottom: 10px;
     right: 5px;
-    font-family: 'Gentium Book Basic', serif;
+    
     font-size: 20px;
+}
+
+.bookInfo{
+    font-style: 600;
+    font-size: 30px;
 }
