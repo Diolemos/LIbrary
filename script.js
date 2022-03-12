@@ -4,6 +4,11 @@ let myLibrary = []
 //The DOM Element where the library will be displayed
 let cardDeck = document.getElementById('card-deck');
 
+//button to add a new Book
+//makes the input form modal apear
+
+let showAddBookModal = document.getElementById('addBook')
+
 //constructor function to create the book objects
 
 function Book(title, author, pages, releaseYear, read) {
@@ -100,3 +105,7 @@ function removeBook(elId) {
 function toggleRead(elId) {
     document.getElementById(`book${elId}`).classList.toggle('read')
 }
+
+showAddBookModal.addEventListener('click', () => {
+    console.log('click!!')
+})

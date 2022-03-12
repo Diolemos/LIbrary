@@ -175,6 +175,10 @@ footer p{
 
 }
 
+.invisible{
+    display: none;
+}
+
 #add-modal form{
     width: 400px;
     height: 350px;
