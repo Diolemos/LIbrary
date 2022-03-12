@@ -11,6 +11,8 @@ let showAddBookModal = document.getElementById('addBook')
 
 let closeModal = document.getElementById('cancelBtn');
 
+let addBtn = document.getElementById('addBtn')
+
 //constructor function to create the book objects
 
 function Book(title, author, pages, releaseYear, read) {
@@ -114,4 +116,8 @@ showAddBookModal.addEventListener('click', () => {
 
 closeModal.addEventListener('click', () => {
     document.getElementById('add-modal').classList.add('invisible')
+})
+
+addBtn.addEventListener('click', () => {
+    console.log('test')
 })
