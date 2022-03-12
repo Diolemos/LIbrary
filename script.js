@@ -13,6 +13,15 @@ let closeModal = document.getElementById('cancelBtn');
 
 let addBtn = document.getElementById('addBtn')
 
+
+//form fields
+let formTitle = document.getElementById('title')
+let formAuthor = document.getElementById('author')
+let formPages = document.getElementById('pages')
+let formReleaseYear = document.getElementById('releaseYear')
+let formRead = document.getElementById('isItRead')
+
+
 //constructor function to create the book objects
 
 function Book(title, author, pages, releaseYear, read) {
@@ -119,5 +128,24 @@ closeModal.addEventListener('click', () => {
 })
 
 addBtn.addEventListener('click', () => {
-    console.log('test')
+    addNewBook()
 })
+
+
+// function to submit the form and add a new book
+
+function addNewBook() {
+
+    addBook(new Book(formTitle.value, formAuthor.value, formPages.value, formReleaseYear.value, formRead.value))
+    showLibrary()
+    //resets form
+    formTitle.innerText = ''
+    formAuthor.innerText = ''
+    formPages.value = '0'
+    formRead.value = false
+
+
+    document.getElementById('add-modal').classList.add('invisible')
+
+
+}
