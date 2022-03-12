@@ -187,10 +187,49 @@ footer p{
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:space-around;
+    align-items:stretch;
+    padding-bottom: 90px;
+    border-radius: 20px;
+    font-family: monospace;
+    font-size: 18px;
 }
 #add-modal form h4{
     position: absolute;
-    top: -17px;
-    font-size: 20px;
+    top: -25px;
+    font-size: 22px;
+    left: 20px;
+}
+
+#labelForRead{
+    margin-top: 10px;
+}
+
+#cancelBtn, #addBtn{
+  
+    position: absolute;
+    height: 58px;
+    width: 150px;
+    bottom: 14px;
+    cursor: pointer;
+    border: 1px solid #c5c5c5;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+
+}
+#cancelBtn{
+    left: 34px;
+    background-color: tomato;
+}
+#cancelBtn:hover{
+    background-color: rgb(231, 71, 57);
+    font-weight: 800;
+}
+#addBtn{
+    right:34px;
+    background-color: rgb(88, 138, 88);
+}
+#addBtn:hover{
+    background-color: rgb(62, 143, 62);
+    font-weight: 800;
 }
