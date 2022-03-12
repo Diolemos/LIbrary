@@ -107,5 +107,5 @@ function toggleRead(elId) {
 }
 
 showAddBookModal.addEventListener('click', () => {
-    console.log('click!!')
+    document.getElementById('add-modal').classList.remove('invisible')
 })
