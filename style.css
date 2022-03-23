@@ -73,8 +73,7 @@ header p{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-   
-    
+        
     
 }
 
@@ -86,6 +85,7 @@ header p{
     background: #b3b3b3;
     padding:15px;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .card-title{
