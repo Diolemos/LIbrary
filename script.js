@@ -20,7 +20,7 @@ let formAuthor = document.getElementById('author')
 let formPages = document.getElementById('pages')
 let formReleaseYear = document.getElementById('releaseYear')
 let formRead = document.getElementById('isItRead')
-
+const form = document.getElementById('form')
 
 //constructor function to create the book objects
 
@@ -138,11 +138,8 @@ function addNewBook() {
 
     addBook(new Book(formTitle.value, formAuthor.value, formPages.value, formReleaseYear.value, formRead.value))
     showLibrary()
-    //resets form
-    formTitle.innerText = ''
-    formAuthor.innerText = ''
-    formPages.value = '0'
-    formRead.value = false
+    //reset form
+    form.reset()
 
 
     document.getElementById('add-modal').classList.add('invisible')
