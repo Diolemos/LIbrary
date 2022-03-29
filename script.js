@@ -22,18 +22,17 @@ let formReleaseYear = document.getElementById('releaseYear')
 let formRead = document.getElementById('isItRead')
 const form = document.getElementById('form')
 
-//constructor function to create the book objects
+// constructor function to create the book objects
 
-function Book(title, author, pages, releaseYear, read) {
-
-    this.title = title
-    this.author = author
-
-    this.pages = pages
-    this.releaseYear = releaseYear
-    this.read = read
-    //Every book object will have acess to this info function book.info()
-    this.info = function () {
+class Book {
+    constructor(title, author, page, releaseYeaer, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages
+        this.releaseYeaer = releaseYeaer
+        this.read = read
+    }
+    info() {
         let text = `The book ${title} was written by ${author}. It has ${pages} pages.`
 
         if (read) {
@@ -44,6 +43,28 @@ function Book(title, author, pages, releaseYear, read) {
         return text;
     }
 }
+
+
+// function Book(title, author, pages, releaseYear, read) {
+
+//     this.title = title
+//     this.author = author
+
+//     this.pages = pages
+//     this.releaseYear = releaseYear
+//     this.read = read
+//     //Every book object will have acess to this info function book.info()
+//     this.info = function () {
+//         let text = `The book ${title} was written by ${author}. It has ${pages} pages.`
+
+//         if (read) {
+//             text += ` You have already read this title`
+//         } else {
+//             text += `You haven't fully read this title yet`
+//         }
+//         return text;
+//     }
+// }
 
 // This creates the first book object
 let gulliverstravel = new Book(`Gulliver's Travel`, 'Johnnathan swift', 600, 1775, true);
