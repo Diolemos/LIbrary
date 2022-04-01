@@ -37,19 +37,24 @@ header p{
 
 
 #addBook{
-    border: none;
+    border: 1px solid #754c24;
+    border-radius: 5px;
     background: none;
     font-family: 'Gentium Book Basic', serif;
     font-weight: 900;
     font-style:italic;
     color: #603813;
     font-size: 2.5rem;
-    text-decoration: underline;
+    
     padding-right: 0;
   position: relative;
   margin-bottom: 3%;
   margin-left: 4%;
   transition: all 200ms ease-in-out;
+ text-shadow: -2px 2px 0px rgba(150, 150, 150, 0.82);
+}
+
+
 }
 #addBook:hover{
     color: #92551b;

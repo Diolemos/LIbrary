@@ -25,17 +25,17 @@ const form = document.getElementById('form')
 // constructor function to create the book objects
 
 class Book {
-    constructor(title, author, page, releaseYeaer, read) {
+    constructor(title, author, pages, releaseYear, read) {
         this.title = title;
         this.author = author;
         this.pages = pages
-        this.releaseYeaer = releaseYeaer
+        this.releaseYear = releaseYear
         this.read = read
     }
     info() {
-        let text = `The book ${title} was written by ${author}. It has ${pages} pages.`
+        let text = `The book ${this.title} was written by ${this.author}. It has ${this.pages} pages.`
 
-        if (read) {
+        if (this.read) {
             text += ` You have already read this title`
         } else {
             text += `You haven't fully read this title yet`
