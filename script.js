@@ -12,6 +12,7 @@ let showAddBookModal = document.getElementById('addBook')
 let closeModal = document.getElementById('cancelBtn');
 
 let addBtn = document.getElementById('addBtn')
+let deleteBtn = document.getElementById('delete-btn')
 
 
 //form fields
