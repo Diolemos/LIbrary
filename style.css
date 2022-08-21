@@ -37,7 +37,7 @@ header p{
 
 
 #addBook{
-    border: 1px solid #754c24;
+    border: none;
     border-radius: 5px;
     background: none;
     font-family: 'Gentium Book Basic', serif;
@@ -50,19 +50,23 @@ header p{
   position: relative;
   margin-bottom: 3%;
   margin-left: 4%;
+  transform: scale(1);
   transition: all 200ms ease-in-out;
  text-shadow: -2px 2px 0px rgba(150, 150, 150, 0.82);
 }
 
 
-}
+
 #addBook:hover{
-    color: #351B03;
+    color: #824104;
+    transform: scale(1.1);
+    text-shadow: -2px 2px 5px rgba(150, 150, 150, 0.82);
 }
 
 #addBook:active{
     color: #351B03;
-    transform: scale(1.1);
+    transform: scale(0.93);
+    text-shadow: 0px 0px 0px rgba(96, 96, 96, 0.82);
 }
 
 
